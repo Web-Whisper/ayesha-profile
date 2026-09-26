@@ -1,0 +1,660 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 430px;
+
+    background: linear-gradient(
+        135deg,
+        #10182f,
+        #202b52,
+        #394579
+    );
+
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Decorative circles */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: rgba(155, 164, 255, 0.10);
+
+    top: -145px;
+    right: -60px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    bottom: -110px;
+    left: -65px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    width: 88%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    color: #b9c0ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+
+    letter-spacing: -1px;
+}
+
+.hero h2 {
+    font-size: 22px;
+
+    font-weight: normal;
+
+    color: #e3e6ff;
+
+    margin-bottom: 12px;
+}
+
+.hero-text {
+    font-size: 16px;
+
+    color: #cbd0e6;
+
+    margin-bottom: 3px;
+}
+
+.hero-interest {
+    font-size: 16px;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 11px 23px;
+
+    background: white;
+
+    color: #202b52;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #b9c0ff;
+
+    color: #10182f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    width: 88%;
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 45px 0;
+}
+
+
+/* Section headings */
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+
+    color: #172033;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   ABOUT ME
+========================= */
+
+.about-box {
+    background: white;
+
+    padding: 27px 34px;
+
+    border-radius: 14px;
+
+    border-left: 4px solid #6975bd;
+
+    box-shadow:
+        0 8px 30px rgba(23, 32, 51, 0.07);
+}
+
+.about-box p {
+    color: #596174;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-section {
+    padding-top: 10px;
+
+    padding-bottom: 25px;
+}
+
+.education-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 30px rgba(23, 32, 51, 0.07);
+}
+
+.education-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    background: #eef0ff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-content h3 {
+    font-size: 21px;
+
+    color: #172033;
+
+    margin-bottom: 7px;
+}
+
+.university {
+    color: #6975bd;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.education-details {
+    display: flex;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.education-details div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.education-details span {
+    color: #8a91a3;
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+.education-details strong {
+    color: #30384d;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section {
+    padding-top: 20px;
+
+    padding-bottom: 55px;
+}
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.skill-card {
+    background: white;
+
+    padding: 24px 21px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(23, 32, 51, 0.06);
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(23, 32, 51, 0.10);
+}
+
+.skill-number {
+    color: #9aa3d9;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 11px;
+}
+
+.skill-card h3 {
+    color: #202b52;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.skill-card p {
+    color: #858c9e;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    background: linear-gradient(
+        135deg,
+        #202b52,
+        #394579
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 65px 20px;
+}
+
+.contact-content {
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.contact-section .small-title {
+    margin-bottom: 10px;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.contact-section p {
+    color: #d8dcf0;
+
+    margin-bottom: 22px;
+}
+
+.email {
+    display: inline-block;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #b9c0ff;
+
+    padding-bottom: 4px;
+
+    transition: 0.3s;
+}
+
+.email:hover {
+    color: #b9c0ff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #10182f;
+
+    color: #8d95ad;
+
+    text-align: center;
+
+    padding: 18px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .small-title {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+    .hero-text,
+    .hero-interest {
+        font-size: 15px;
+    }
+
+    .hero-interest {
+        margin-bottom: 20px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        width: 90%;
+
+        padding: 40px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+
+    /* About */
+
+    .about-box {
+        padding: 23px;
+    }
+
+    .about-box p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Education */
+
+    .education-section {
+        padding-top: 5px;
+
+        padding-bottom: 25px;
+    }
+
+    .education-card {
+        flex-direction: column;
+
+        padding: 24px;
+
+        gap: 17px;
+    }
+
+    .education-content h3 {
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+    .education-details {
+        gap: 18px;
+    }
+
+
+    /* Skills */
+
+    .skills-section {
+        padding-top: 15px;
+
+        padding-bottom: 50px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .skill-card {
+        padding: 21px;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        padding: 55px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .email {
+        font-size: 15px;
+
+        word-break: break-word;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        min-height: 410px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .button {
+        padding: 11px 21px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+}
